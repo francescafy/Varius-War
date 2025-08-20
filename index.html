@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Virus War [Francesca Fyrigou 3893]</title>
+	
+	<style type="text/css">
+
+		#mycanvas{
+			background-color: black;
+			background-image : url("Images/bg2.png"); /*Εικόνα backgraound */
+			border: 3px solid #66ff33;  /* Πλαίσιο */
+			background-position: center;
+			
+			-webkit-animation: animatedBackground 20s linear infinite; /*Μετακίνηση είκονας*/
+			background-repeat: repeat-y;
+		}
+
+		@-webkit-keyframes animatedBackground {
+			from { background-position: 0 0; }
+			to { background-position: 0 1500px; }
+		}	
+
+	</style> 
+
+</head>
+	<body>
+		  
+		<canvas id="mycanvas" width="1255" height="550" ></canvas>
+
+		<audio id="myAudio">
+			<source src="audio/gametheme2.ogg" type="audio/ogg">
+			<source src="audio/gametheme2.ogg" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+
+		<button onclick="playAudio()" type="button">Music On</button>
+		<button onclick="pauseAudio()" type="button">Music Off</button> 
+		  
+		<script>
+			var x = document.getElementById("myAudio"); 
+			function playAudio() { 
+				x.play(); 
+			} 
+			function pauseAudio() { 
+				x.pause(); 
+			} 
+		</script>
+
+		<script type="text/javascript" src="shooter.js" ></script>
+
+	</body>
+</html>
